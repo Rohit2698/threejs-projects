@@ -1,4 +1,3 @@
-import { useLoader } from '@react-three/fiber';
 import React from 'react';
 
 const Grave = ({ position, rotation, map }) => {
