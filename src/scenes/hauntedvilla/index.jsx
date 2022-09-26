@@ -14,6 +14,7 @@ import Tree from './Tree';
 import Title from './Title';
 import Settings from './Settings';
 import { useCallback } from 'react';
+import Loader from '../loader';
 
 const HauntedVilla = () => {
   const [screenSize, setScreenSize] = useState({
@@ -59,12 +60,12 @@ const HauntedVilla = () => {
           ))}
       </group>
     );
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className='container'>
-      <Suspense fallback={<h1 style={{ color: 'white' }}>Loading</h1>}>
+      <Suspense fallback={<Loader />}>
         <Canvas
           style={{
             height: screenSize.height,
